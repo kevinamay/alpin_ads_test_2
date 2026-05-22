@@ -3,9 +3,9 @@ import Logos from "@/components/Logos";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Process from "@/components/Process";
-import Testimonials from "@/components/Testimonials";
 import Socials from "@/components/Socials";
 import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -15,9 +15,9 @@ export default function Home() {
       <Services />
       <Work />
       <Process />
-      <Testimonials />
       <Socials />
       <About />
+      <Testimonials />
     </main>
   );
 }

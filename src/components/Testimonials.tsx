@@ -53,7 +53,7 @@ const col3Data = [
 ];
 
 const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => (
-  <div className={`flex flex-col border-black h-full ${!isLast ? 'border-b' : ''}`}>
+  <div className={`flex flex-col border-black ${!isLast ? 'border-b' : ''}`}>
     {/* Top Bar */}
     <div className="flex justify-between items-center px-[32px] py-[16px] border-b border-black">
       <span className="font-mono text-[11px] uppercase text-[#242424]">{data.company} &darr;</span>
@@ -65,7 +65,7 @@ const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => (
     </div>
     
     {/* Content */}
-    <div className="p-[32px] flex flex-col h-full">
+    <div className="p-[32px] flex flex-col">
       <div className="w-[70px] h-[70px] relative mb-8">
         <Image src={data.logo} alt={data.company} fill className="object-contain" />
       </div>
@@ -74,7 +74,7 @@ const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => (
         {data.title}
       </h4>
       
-      <div className="font-sans text-[14px] leading-[1.8] text-[#444444] mb-12 whitespace-pre-line">
+      <div className="font-sans text-[16px] leading-[1.8] text-[#444444] mb-12 whitespace-pre-line">
         {data.content}
       </div>
       
@@ -121,39 +121,42 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Main Grid */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-3">
+      {/* Main Layout: 50% Left / 50% Right */}
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2">
         
-        {/* Column 1: Intro */}
+        {/* Left Half: Intro */}
         <div className="flex flex-col justify-between p-[48px] lg:p-[64px] border-b lg:border-b-0 lg:border-r border-black">
           <div>
-            <h3 className="font-mono text-[12px] uppercase tracking-widest mb-12 text-[#242424]">
+            <h3 className="font-mono text-[13px] uppercase tracking-widest mb-[32px] text-[#242424]">
               TESTIMONIALS
             </h3>
-            <h2 className="font-sans text-5xl lg:text-[64px] leading-[1.1] text-[#242424] mb-8">
+            <h2 className="font-sans text-5xl lg:text-[80px] leading-[1.1] text-[#242424] mb-[32px]">
               What my<br/>clients say
             </h2>
-            <p className="font-sans text-[16px] leading-[1.8] text-[#444444] max-w-[300px]">
+            <p className="font-sans text-[18px] leading-[1.8] text-[#444444] max-w-[400px]">
               Discover what our clients have to say about their transformative experiences partnering with us. Read their testimonials below.
             </p>
           </div>
           <div className="mt-24 lg:mt-0">
-            <Image src="/assets/Vector (4).png" alt="Geometric Logo" width={80} height={80} className="object-contain" />
+            <Image src="/assets/Vector (6).svg" alt="Geometric Logo" width={80} height={104.41} className="object-contain" />
           </div>
         </div>
 
-        {/* Column 2: Testimonials List 1 */}
-        <div className="flex flex-col border-b lg:border-b-0 lg:border-r border-black">
-          {col2Data.map((item, idx) => (
-            <TestimonialCard key={idx} data={item} isLast={idx === col2Data.length - 1} />
-          ))}
-        </div>
+        {/* Right Half: Testimonials Grid (split into 2 columns) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+          {/* Sub-Column 1: Testimonials List 1 */}
+          <div className="flex flex-col border-b md:border-b-0 md:border-r border-black">
+            {col2Data.map((item, idx) => (
+              <TestimonialCard key={idx} data={item} isLast={idx === col2Data.length - 1} />
+            ))}
+          </div>
 
-        {/* Column 3: Testimonials List 2 */}
-        <div className="flex flex-col">
-          {col3Data.map((item, idx) => (
-            <TestimonialCard key={idx} data={item} isLast={idx === col3Data.length - 1} />
-          ))}
+          {/* Sub-Column 2: Testimonials List 2 */}
+          <div className="flex flex-col">
+            {col3Data.map((item, idx) => (
+              <TestimonialCard key={idx} data={item} isLast={idx === col3Data.length - 1} />
+            ))}
+          </div>
         </div>
 
       </div>
