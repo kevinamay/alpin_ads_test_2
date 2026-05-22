@@ -6,6 +6,7 @@ import Process from "@/components/Process";
 import Socials from "@/components/Socials";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
+import News from "@/components/News";
 import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Socials />
       <About />
       <Testimonials />
+      <News />
       <CTA />
     </main>
   );
