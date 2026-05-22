@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const brands = [
   { name: "SUPER FOOD", src: "/logos/logo-2.png", w: 65, h: 65 },
-  { name: "CREATIVE STUDIO", src: "/logos/logo-4.png", w: 75, h: 65 },
-  { name: "IN MOTION", src: "/logos/logo-3.png", w: 74, h: 65 },
-  { name: "IN MOTION", src: "/logos/logo-6.png", w: 74, h: 65 },
+  { name: "CREATIVE STUDIO", src: "/logos/logo-3.png", w: 75, h: 65 },
+  { name: "IN MOTION", src: "/logos/logo-4.png", w: 74, h: 65 },
+  { name: "IN MOTION", src: "/logos/logo-4.png", w: 74, h: 65 },
   { name: "Abstract", src: "/logos/logo-7.png", w: 79, h: 65 },
   { name: "INVISION", src: "/logos/logo-5.png", w: 70, h: 65 },
   { name: "VISION STUDIO", src: "/logos/logo-9.png", w: 123, h: 35 }
