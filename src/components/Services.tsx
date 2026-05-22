@@ -25,7 +25,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full grid grid-cols-1 lg:grid-cols-2 text-[#242424] border-b border-black">
+    <section id="services" className="w-full grid grid-cols-1 lg:grid-cols-2 text-[#242424] border-b border-black">
       {/* Kolom Kiri: Header & Deskripsi */}
       <div className="flex flex-col gap-[16px] p-[64px] border-b border-black lg:border-b-0 lg:border-r">
         <span className="font-mono text-[13px] uppercase font-normal leading-[1.4]">
