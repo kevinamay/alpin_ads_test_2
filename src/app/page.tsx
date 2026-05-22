@@ -20,8 +20,8 @@ export default function Home() {
       <Socials />
       <About />
       <Testimonials />
-      <News />
       <CTA />
+      <News />
     </main>
   );
 }
