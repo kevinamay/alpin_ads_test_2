@@ -3,6 +3,7 @@ import Logos from "@/components/Logos";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Process from "@/components/Process";
+import Socials from "@/components/Socials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <Work />
       <Process />
+      <Socials />
     </main>
   );
 }
