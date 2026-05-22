@@ -37,7 +37,7 @@ const col3Data = [
     logo: "/assets/logos/logo-4.png",
     title: "Trusted Partner: Exceptional Service",
     content: "Choosing Skold as our branding partner was the best decision we made. Their exceptional service and expertise made all the difference. Skold took the time to listen to our needs and preferences, and they delivered results that exceeded our expectations.\n\nFrom the initial concept development to the final delivery, Skold demonstrated professionalism and attention to detail every step of the way. They were responsive to our feedback and made sure that we were completely satisfied with the end result.\n\nWe couldn't be happier with our branding, and we have Skold to thank for it.",
-    portrait: "/assets/Image (11).png",
+    portrait: "/assets/Image (10).png",
     name: "JAMES THOMPSON",
     role: "In motion"
   },
@@ -46,7 +46,7 @@ const col3Data = [
     logo: "/assets/logos/logo-6.png",
     title: "Lorem dolor amet ipsum.",
     content: "Thanks to Skold, our brand is thriving. Their innovative solutions and creative approach have been instrumental in driving our success. Skold took the time to understand our brand's unique needs and challenges, and they developed a customized branding strategy that exceeded our expectations. From the initial brainstorming sessions to the final delivery, Skold demonstrated creativity, professionalism, and a commitment to excellence.\n\nThey provided valuable insights and guidance throughout the process, and the results speak for themselves. We would highly recommend Skold to anyone looking for innovative branding solutions.",
-    portrait: "/assets/Image (10).png",
+    portrait: "/assets/Image (11).png",
     name: "BENJAMIN WILSON",
     role: "Creative studio"
   }
