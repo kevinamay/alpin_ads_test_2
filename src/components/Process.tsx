@@ -1,4 +1,7 @@
+"use client";
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 const steps = [
   {
@@ -48,6 +51,8 @@ const steps = [
 ];
 
 export default function Process() {
+  const [openStep, setOpenStep] = useState<number | null>(0);
+
   return (
     <section className="w-full flex flex-col bg-white">
       {/* Area Marquee Heading (Atas) */}
@@ -72,15 +77,17 @@ export default function Process() {
       </div>
 
       {/* Area Grid Content (Bawah) */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 border-b border-black bg-white">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 border-b border-black bg-white items-start">
         
         {/* Kolom Kiri (Foto Model) */}
-        <div className="relative w-full h-[600px] lg:h-full border-b border-black lg:border-b-0 lg:border-r">
+        <div className="relative w-full h-[600px] lg:h-[902px] lg:sticky lg:top-0 border-b border-black lg:border-b-0 lg:border-r overflow-hidden">
           <Image 
             src="/assets/Image (6).png" 
             fill 
-            className="object-cover" 
+            className="object-cover"
+            style={{ objectPosition: 'center 20%' }}
             alt="Process Model" 
+            priority
           />
         </div>
 
@@ -108,33 +115,40 @@ export default function Process() {
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col w-full">
                 {/* Top Bar */}
-                <div className="h-[51px] border-t border-black flex justify-between items-center px-[64px]">
+                <div 
+                  className="h-[51px] border-t border-black flex justify-between items-center px-[64px] cursor-pointer hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpenStep(openStep === index ? null : index)}
+                >
                   <span className="uppercase font-mono text-[13px]">{step.label}</span>
-                  <span className="font-mono text-[13px]">↓</span>
+                  <span className="font-mono text-[13px] transition-transform duration-300">
+                    {openStep === index ? '↑' : '↓'}
+                  </span>
                 </div>
                 
                 {/* Content Box */}
-                <div className="flex flex-col lg:flex-row gap-8 p-[64px] border-t border-black">
-                  {/* Kiri: Angka */}
-                  <div className="font-sans text-[24px]">
-                    {step.num}
+                {openStep === index && (
+                  <div className="flex flex-col lg:flex-row gap-8 p-[64px] border-t border-black">
+                    {/* Kiri: Angka */}
+                    <div className="font-sans text-[24px]">
+                      {step.num}
+                    </div>
+                    
+                    {/* Kanan: Deskripsi */}
+                    <div className="flex flex-col flex-1">
+                      <h3 className="text-[24px] uppercase font-sans">
+                        {step.title}
+                      </h3>
+                      <p className="text-[18px] mt-4 leading-[1.8]">
+                        {step.desc}
+                      </p>
+                      <ul className="list-disc ml-6 mt-6 space-y-2 text-[18px]">
+                        {step.bullets.map((bullet, idx) => (
+                          <li key={idx}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  
-                  {/* Kanan: Deskripsi */}
-                  <div className="flex flex-col flex-1">
-                    <h3 className="text-[24px] uppercase font-sans">
-                      {step.title}
-                    </h3>
-                    <p className="text-[18px] mt-4 leading-[1.8]">
-                      {step.desc}
-                    </p>
-                    <ul className="list-disc ml-6 mt-6 space-y-2 text-[18px]">
-                      {step.bullets.map((bullet, idx) => (
-                        <li key={idx}>{bullet}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
