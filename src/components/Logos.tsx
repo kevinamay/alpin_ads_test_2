@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
 const brands = [
-  { name: "SUPER FOOD", src: "/logos/logo-2.png", w: 65, h: 65 },
-  { name: "CREATIVE STUDIO", src: "/logos/logo-3.png", w: 75, h: 65 },
-  { name: "IN MOTION", src: "/logos/logo-4.png", w: 74, h: 65 },
-  { name: "IN MOTION", src: "/logos/logo-4.png", w: 74, h: 65 },
-  { name: "Abstract", src: "/logos/logo-7.png", w: 79, h: 65 },
-  { name: "INVISION", src: "/logos/logo-5.png", w: 70, h: 65 },
-  { name: "VISION STUDIO", src: "/logos/logo-9.png", w: 123, h: 35 }
+  { name: "SUPER FOOD", src: "/assets/logos/logo-2.png", w: 65, h: 65 },
+  { name: "CREATIVE STUDIO", src: "/assets/logos/logo-3.png", w: 75, h: 65 },
+  { name: "IN MOTION", src: "/assets/logos/logo-4.png", w: 74, h: 65 },
+  { name: "IN MOTION", src: "/assets/logos/logo-4.png", w: 74, h: 65 },
+  { name: "Abstract", src: "/assets/logos/logo-7.png", w: 79, h: 65 },
+  { name: "INVISION", src: "/assets/logos/logo-5.png", w: 70, h: 65 },
+  { name: "VISION STUDIO", src: "/assets/logos/logo-9.png", w: 123, h: 35 }
 ];
 
 export default function Logos() {

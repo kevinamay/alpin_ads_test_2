@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Kolom Kiri: Area Gambar */}
       <div className="relative h-[60vh] lg:h-full lg:border-r lg:border-black">
         <Image 
-          src="/Image Wrapper.jpg" 
+          src="/assets/Image Wrapper.jpg" 
           alt="Hero Image" 
           fill 
           className="object-cover"
@@ -19,7 +19,7 @@ export default function Hero() {
         {/* Ikon Vector Kiri Atas */}
         <div className="mt-12 ml-12 lg:mt-16 lg:ml-16 w-[80px] h-[80px] relative flex-none">
           <Image 
-            src="/Vector (4).png" 
+            src="/assets/Vector (4).png" 
             alt="Logo Vector" 
             fill 
             className="object-contain"
