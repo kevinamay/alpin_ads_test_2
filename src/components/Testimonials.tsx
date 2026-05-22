@@ -1,55 +1,109 @@
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 
-const testimonials = [
+const col2Data = [
   {
-    Name: "EMILY JOHNSON",
-    Role: "Super food",
-    Portrait: "/assets/testimonial-01-1.png",
-    BrandLogo: "/assets/logos/logo-1.png",
-    Title: "Exceptional Branding Partner",
-    Content: "Working with Skold was a game-changer for our brand. Their innovative designs and strategic insights propelled us to success. From the initial brainstorming session to the final delivery, they exceeded our expectations at every step."
+    company: "SUPER FOOD",
+    logo: "/assets/logos/logo-2.png",
+    title: "Exceptional Branding Partner",
+    content: "Working with Skold was a game-changer for our brand. Their innovative designs and strategic insights propelled us to success. From the initial brainstorming session to the final delivery, they exceeded our expectations at every step. Their attention to detail and commitment to understanding our brand's identity were truly remarkable.\n\nWith their help, we were able to elevate our brand and connect with our audience in meaningful ways.",
+    portrait: "/assets/testimonial-01-1.png",
+    name: "EMILY JOHNSON",
+    role: "Super food"
   },
   {
-    Name: "MICHAEL CHEN",
-    Role: "Creative Studio",
-    Portrait: "/assets/Image (8).png",
-    BrandLogo: "/assets/logos/logo-2.png",
-    Title: "Creative Genius",
-    Content: "The team's ability to translate complex ideas into clean, impactful visuals is unmatched. They delivered a brand identity that truly resonates with our audience."
+    company: "INVISION SQUARE",
+    logo: "/assets/logos/logo-5.png",
+    title: "Creative Genius: Beyond Expectations",
+    content: "We were blown away by the creativity and dedication of Skold. They exceeded our expectations, delivering results that truly set us apart. From the conceptualization stage to the final execution, Skold demonstrated an exceptional level of skill and professionalism.",
+    portrait: "/assets/Image (9).png",
+    name: "SOPHIA RODRIGUEZ",
+    role: "Invision Square"
   },
   {
-    Name: "SOPHIA RODRIGUEZ",
-    Role: "In Motion",
-    Portrait: "/assets/Image (9).png",
-    BrandLogo: "/assets/logos/logo-3.png",
-    Title: "Strategic Excellence",
-    Content: "Beyond just aesthetics, they provided a strategic framework that has guided our marketing efforts for the past year. Highly recommended."
-  },
-  {
-    Name: "DAVID WILSON",
-    Role: "Abstract",
-    Portrait: "/assets/Image (10).png",
-    BrandLogo: "/assets/logos/logo-7.png",
-    Title: "Professional & Reliable",
-    Content: "Everything was delivered on time and exceeded our quality standards. A seamless partnership from start to finish."
+    company: "VISION STUDIO",
+    logo: "/assets/logos/logo-9.png",
+    title: "Transformative Experience: Unparalleled Quality",
+    content: "Their attention to detail and commitment to quality were unparalleled. From the initial consultation to the final delivery, Skold demonstrated a deep understanding of our brand's needs and objectives.",
+    portrait: "/assets/Image (8).png",
+    name: "ALEXANDER SMITH",
+    role: "Vision Studio"
   }
 ];
+
+const col3Data = [
+  {
+    company: "IN MOTION",
+    logo: "/assets/logos/logo-4.png",
+    title: "Trusted Partner: Exceptional Service",
+    content: "Choosing Skold as our branding partner was the best decision we made. Their exceptional service and expertise made all the difference. Skold took the time to listen to our needs and preferences, and they delivered results that exceeded our expectations.\n\nFrom the initial concept development to the final delivery, Skold demonstrated professionalism and attention to detail every step of the way. They were responsive to our feedback and made sure that we were completely satisfied with the end result.\n\nWe couldn't be happier with our branding, and we have Skold to thank for it.",
+    portrait: "/assets/Image (11).png",
+    name: "JAMES THOMPSON",
+    role: "In motion"
+  },
+  {
+    company: "CREATIVE STUDIO",
+    logo: "/assets/logos/logo-6.png",
+    title: "Lorem dolor amet ipsum.",
+    content: "Thanks to Skold, our brand is thriving. Their innovative solutions and creative approach have been instrumental in driving our success. Skold took the time to understand our brand's unique needs and challenges, and they developed a customized branding strategy that exceeded our expectations. From the initial brainstorming sessions to the final delivery, Skold demonstrated creativity, professionalism, and a commitment to excellence.\n\nThey provided valuable insights and guidance throughout the process, and the results speak for themselves. We would highly recommend Skold to anyone looking for innovative branding solutions.",
+    portrait: "/assets/Image (10).png",
+    name: "BENJAMIN WILSON",
+    role: "Creative studio"
+  }
+];
+
+const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => (
+  <div className={`flex flex-col border-black h-full ${!isLast ? 'border-b' : ''}`}>
+    {/* Top Bar */}
+    <div className="flex justify-between items-center px-[32px] py-[16px] border-b border-black">
+      <span className="font-mono text-[11px] uppercase text-[#242424]">{data.company} &darr;</span>
+      <div className="flex gap-[2px]">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} size={12} fill="#111111" color="#111111" />
+        ))}
+      </div>
+    </div>
+    
+    {/* Content */}
+    <div className="p-[32px] flex flex-col h-full">
+      <div className="w-[70px] h-[70px] relative mb-8">
+        <Image src={data.logo} alt={data.company} fill className="object-contain" />
+      </div>
+      
+      <h4 className="font-sans text-[22px] leading-[1.3] text-[#242424] mb-6">
+        {data.title}
+      </h4>
+      
+      <div className="font-sans text-[14px] leading-[1.8] text-[#444444] mb-12 whitespace-pre-line">
+        {data.content}
+      </div>
+      
+      {/* Profile */}
+      <div className="flex items-center gap-4 mt-auto">
+        <Image src={data.portrait} alt={data.name} width={48} height={48} className="rounded-full object-cover w-[48px] h-[48px]" />
+        <div className="flex flex-col">
+          <span className="font-mono text-[11px] uppercase text-[#242424]">{data.name}</span>
+          <span className="font-sans text-[12px] text-[#777777]">{data.role}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default function Testimonials() {
   return (
     <section className="w-full border-b border-black bg-white">
-      {/* Area Marquee Heading (Atas) */}
-      <div className="w-full h-[181px] border-b border-black overflow-hidden flex items-center bg-white relative">
+      {/* Marquee Heading */}
+      <div className="w-full h-[120px] lg:h-[181px] border-b border-black overflow-hidden flex items-center bg-white relative">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex shrink-0">
-              {[...Array(4)].map((_, j) => {
+              {[...Array(6)].map((_, j) => {
                 const isOutline = j % 2 !== 0;
                 return (
                   <div key={j} className="flex items-center">
                     <span 
-                      className={`font-sans text-[96px] uppercase leading-none ${
+                      className={`font-sans text-[64px] lg:text-[96px] uppercase leading-none ${
                         isOutline ? 'text-transparent' : 'text-[#242424]'
                       }`}
                       style={{
@@ -57,7 +111,7 @@ export default function Testimonials() {
                         marginRight: '48px'
                       }}
                     >
-                      TESTIMONIALS
+                      Feedback
                     </span>
                   </div>
                 );
@@ -67,68 +121,41 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Grid Testimonials (Bawah) */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-        {testimonials.map((testi, index) => {
-          return (
-            <div 
-              key={index} 
-              className={`p-[48px] lg:p-[64px] border-black flex flex-col justify-between border-b ${
-                index % 2 === 0 ? 'lg:border-r' : ''
-              } ${
-                index >= testimonials.length - 2 ? 'lg:border-b-0' : ''
-              } ${
-                index === testimonials.length - 1 ? 'border-b-0' : ''
-              }`}
-            >
-              <div>
-                {/* Baris Atas */}
-                <div className="flex justify-between items-center mb-8">
-                  <div className="w-[65px] h-[65px] relative">
-                    <Image 
-                      src={testi.BrandLogo} 
-                      alt={`${testi.Role} logo`} 
-                      fill 
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, starIdx) => (
-                      <Star key={starIdx} size={16} fill="#111111" color="#111111" />
-                    ))}
-                  </div>
-                </div>
+      {/* Main Grid */}
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3">
+        
+        {/* Column 1: Intro */}
+        <div className="flex flex-col justify-between p-[48px] lg:p-[64px] border-b lg:border-b-0 lg:border-r border-black">
+          <div>
+            <h3 className="font-mono text-[12px] uppercase tracking-widest mb-12 text-[#242424]">
+              TESTIMONIALS
+            </h3>
+            <h2 className="font-sans text-5xl lg:text-[64px] leading-[1.1] text-[#242424] mb-8">
+              What my<br/>clients say
+            </h2>
+            <p className="font-sans text-[16px] leading-[1.8] text-[#444444] max-w-[300px]">
+              Discover what our clients have to say about their transformative experiences partnering with us. Read their testimonials below.
+            </p>
+          </div>
+          <div className="mt-24 lg:mt-0">
+            <Image src="/assets/Vector (4).png" alt="Geometric Logo" width={80} height={80} className="object-contain" />
+          </div>
+        </div>
 
-                {/* Tengah (Konten) */}
-                <h4 className="font-sans text-[24px] font-normal text-[#242424] mb-4">
-                  {testi.Title}
-                </h4>
-                <p className="font-sans text-[16px] leading-[1.8] text-[#242424]">
-                  {testi.Content}
-                </p>
-              </div>
+        {/* Column 2: Testimonials List 1 */}
+        <div className="flex flex-col border-b lg:border-b-0 lg:border-r border-black">
+          {col2Data.map((item, idx) => (
+            <TestimonialCard key={idx} data={item} isLast={idx === col2Data.length - 1} />
+          ))}
+        </div>
 
-              {/* Bawah (Profil Klien) */}
-              <div className="mt-12 flex items-center gap-4">
-                <Image 
-                  src={testi.Portrait} 
-                  alt={testi.Name} 
-                  width={60} 
-                  height={60} 
-                  className="rounded-full object-cover w-[60px] h-[60px]"
-                />
-                <div className="flex flex-col">
-                  <span className="font-mono text-[13px] uppercase text-[#242424]">
-                    {testi.Name}
-                  </span>
-                  <span className="font-sans text-[14px] text-[#777777]">
-                    {testi.Role}
-                  </span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {/* Column 3: Testimonials List 2 */}
+        <div className="flex flex-col">
+          {col3Data.map((item, idx) => (
+            <TestimonialCard key={idx} data={item} isLast={idx === col3Data.length - 1} />
+          ))}
+        </div>
+
       </div>
     </section>
   );
