@@ -1,5 +1,8 @@
+"use client";
+
 import Image from 'next/image';
 import { Star } from 'lucide-react';
+import { useState } from 'react';
 
 const col2Data = [
   {
@@ -52,43 +55,60 @@ const col3Data = [
   }
 ];
 
-const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => (
-  <div className={`flex flex-col border-black ${!isLast ? 'border-b' : ''}`}>
-    {/* Top Bar */}
-    <div className="flex justify-between items-center px-[32px] py-[16px] border-b border-black">
-      <span className="font-mono text-[11px] uppercase text-[#242424]">{data.company} &darr;</span>
-      <div className="flex gap-[2px]">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} size={12} fill="#111111" color="#111111" />
-        ))}
-      </div>
-    </div>
-    
-    {/* Content */}
-    <div className="p-[32px] flex flex-col">
-      <div className="w-[70px] h-[70px] relative mb-8">
-        <Image src={data.logo} alt={data.company} fill className="object-contain" />
-      </div>
-      
-      <h4 className="font-sans text-[22px] leading-[1.3] text-[#242424] mb-6">
-        {data.title}
-      </h4>
-      
-      <div className="font-sans text-[16px] leading-[1.8] text-[#444444] mb-12 whitespace-pre-line">
-        {data.content}
+const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <div className={`flex flex-col border-black ${!isLast ? 'border-b' : ''}`}>
+      {/* Top Bar */}
+      <div 
+        className={`flex justify-between items-center px-[32px] py-[16px] cursor-pointer hover:bg-[#f4f4f4] transition-colors ${isOpen ? 'border-b border-black' : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="font-mono text-[11px] uppercase text-[#242424]">
+          {data.company} {isOpen ? '↑' : '↓'}
+        </span>
+        <div className="flex gap-[2px]">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} size={12} fill="#111111" color="#111111" />
+          ))}
+        </div>
       </div>
       
-      {/* Profile */}
-      <div className="flex items-center gap-4 mt-auto">
-        <Image src={data.portrait} alt={data.name} width={48} height={48} className="rounded-full object-cover w-[48px] h-[48px]" />
-        <div className="flex flex-col">
-          <span className="font-mono text-[11px] uppercase text-[#242424]">{data.name}</span>
-          <span className="font-sans text-[12px] text-[#777777]">{data.role}</span>
+      {/* Content (Accordion) */}
+      <div 
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="p-[32px] flex flex-col">
+            <div className="w-[70px] h-[70px] relative mb-8">
+              <Image src={data.logo} alt={data.company} fill className="object-contain" />
+            </div>
+            
+            <h4 className="font-sans text-[22px] leading-[1.3] text-[#242424] mb-6">
+              {data.title}
+            </h4>
+            
+            <div className="font-sans text-[16px] leading-[1.8] text-[#444444] mb-12 whitespace-pre-line">
+              {data.content}
+            </div>
+            
+            {/* Profile */}
+            <div className="flex items-center gap-4 mt-auto">
+              <Image src={data.portrait} alt={data.name} width={48} height={48} className="rounded-full object-cover w-[48px] h-[48px]" />
+              <div className="flex flex-col">
+                <span className="font-mono text-[11px] uppercase text-[#242424]">{data.name}</span>
+                <span className="font-sans text-[12px] text-[#777777]">{data.role}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function Testimonials() {
   return (
