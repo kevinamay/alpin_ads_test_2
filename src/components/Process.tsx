@@ -153,6 +153,13 @@ export default function Process() {
             ))}
           </div>
 
+          {/* Get In Touch Button */}
+          <button className="w-full flex items-center justify-center bg-[#242424] text-white px-[24px] py-[20px] transition-colors hover:bg-black">
+            <span className="font-mono text-[13px] uppercase leading-[1.4]">
+              GET IN TOUCH
+            </span>
+          </button>
+
         </div>
       </div>
     </section>
