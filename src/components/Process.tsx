@@ -96,7 +96,7 @@ export default function Process() {
           {/* Header Section */}
           <div className="p-[64px] flex flex-col">
             <Image 
-              src="/assets/Vector.svg" 
+              src="/assets/Vector (8).svg" 
               width={60} 
               height={60} 
               className="w-[60px] h-[60px] object-contain" 
