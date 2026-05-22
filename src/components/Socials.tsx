@@ -11,7 +11,7 @@ const socials = [
     name: "INSTAGRAM",
     iconSrc: "/assets/Vector (1).png",
     linkText: "VISIT INSTAGRAM",
-    isDark: true
+    isDark: false
   },
   {
     name: "BEHANCE",
