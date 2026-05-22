@@ -16,18 +16,11 @@ export default function About() {
             Passion<br className="hidden lg:block" />for design.
           </h2>
           <p className="mt-[32px] font-sans text-[18px] leading-[1.8] max-w-[500px]">
-            I am a passionate graphic designer with a keen eye for detail and a love for creating visually stunning and meaningful designs. With a strong foundation in design principles and a deep understanding of user experience, I strive to deliver impactful solutions that resonate with audiences.
+            We are a passionate team of brand enthusiasts dedicated to crafting exceptional experiences that resonate with audiences worldwide. With a commitment to excellence and a keen eye for detail, we specialize in delivering tailored solutions that bring your brand's story to life.
           </p>
           <p className="mt-[24px] font-sans text-[18px] leading-[1.8] max-w-[500px]">
-            When I'm not designing, you can find me exploring the outdoors, seeking inspiration from nature, or immersing myself in the latest design trends and technologies.
+            Our collaborative approach ensures that every project is infused with authenticity, creativity, and strategic thinking, driving tangible results for our clients.
           </p>
-        </div>
-
-        {/* Bagian Bawah (Button) */}
-        <div className="mt-16 lg:mt-0">
-          <button className="w-[158px] h-[51px] bg-[#EBFB48] border border-black flex items-center justify-center font-mono text-[13px] uppercase text-[#242424] hover:bg-[#242424] hover:text-white transition-colors">
-            GET IN TOUCH
-          </button>
         </div>
 
       </div>
