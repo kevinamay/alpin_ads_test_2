@@ -41,10 +41,10 @@ export default function News() {
         {newsData.map((item, idx) => (
           <div 
             key={idx} 
-            className="flex flex-col border-b lg:border-b-0 border-black lg:border-r [&:nth-child(2)]:md:border-r-0 [&:nth-child(4)]:lg:border-r-0 last:border-b-0"
+            className="flex flex-col border-b lg:border-b-0 border-black md:border-r [&:nth-child(2n)]:md:border-r-0 [&:nth-child(2n)]:lg:border-r last:border-b-0 lg:last:border-r-0"
           >
             {/* Image Container (Square) */}
-            <div className="w-full aspect-square relative border-b border-black">
+            <div className="w-full aspect-square relative">
               <Image 
                 src={item.image} 
                 alt={item.title} 
@@ -54,7 +54,7 @@ export default function News() {
             </div>
             
             {/* Text Content */}
-            <div className="p-[32px] lg:p-[48px] flex flex-col flex-grow bg-white hover:bg-gray-50 transition-colors cursor-pointer">
+            <div className="p-[32px] lg:p-[48px] flex flex-col flex-grow bg-white hover:bg-gray-50 transition-colors cursor-pointer border-t border-black">
               <h3 className="font-mono text-[13px] uppercase leading-[1.6] text-[#242424] mb-6">
                 {item.title}
               </h3>
