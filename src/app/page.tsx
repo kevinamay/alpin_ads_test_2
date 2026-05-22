@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Logos from "@/components/Logos";
+import About from "@/components/About";
 import Services from "@/components/Services";
 import Work from "@/components/Work";
 import Process from "@/components/Process";
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="w-full flex flex-col min-h-screen bg-white">
       <Hero />
       <Logos />
+      <About />
       <Services />
       <Work />
       <Process />
