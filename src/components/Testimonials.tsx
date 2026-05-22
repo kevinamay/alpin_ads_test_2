@@ -7,7 +7,7 @@ const col2Data = [
     logo: "/assets/logos/logo-2.png",
     title: "Exceptional Branding Partner",
     content: "Working with Skold was a game-changer for our brand. Their innovative designs and strategic insights propelled us to success. From the initial brainstorming session to the final delivery, they exceeded our expectations at every step. Their attention to detail and commitment to understanding our brand's identity were truly remarkable.\n\nWith their help, we were able to elevate our brand and connect with our audience in meaningful ways.",
-    portrait: "/assets/testimonial-01 1.png",
+    portrait: "/assets/Image (8).png",
     name: "EMILY JOHNSON",
     role: "Super food"
   },
