@@ -11,7 +11,7 @@ export default function Header() {
       </div>
 
       {/* Navigasi (Tengah - Desktop) */}
-      <nav className="hidden lg:flex flex-1 items-center gap-[32px] px-8">
+      <nav className="hidden lg:flex flex-1 items-center justify-end gap-[32px] px-8">
         <Link href="/projects" className="hover:underline underline-offset-4">
           PROJECTS
         </Link>
