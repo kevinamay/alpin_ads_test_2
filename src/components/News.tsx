@@ -2,22 +2,22 @@ import Image from 'next/image';
 
 const newsData = [
   {
-    image: "/assets/Image (7).png",
+    image: "/assets/Image (12).png",
     title: "THINGS TO LOOK FOR WHEN COMPARING BRANDING",
     desc: "Key elements to consider when evaluating branding options. Ensure alignment with your vision, audience, and long-term goals."
   },
   {
-    image: "/assets/Image (2).png",
+    image: "/assets/Image (13).png",
     title: "5 STAND-OUT FEATURES OF BRANDING YOU SHOULD KNOW",
     desc: "Discover five essential features that distinguish remarkable branding efforts, setting your brand apart from competitors."
   },
   {
-    image: "/assets/Image (5).png",
+    image: "/assets/Image (14).png",
     title: "BRANDING: WHAT REAL CUSTOMERS HAVE TO SAY",
     desc: "Insights from real customers on the impact of branding. Learn how effective branding influences purchasing decisions."
   },
   {
-    image: "/assets/Image (6).png",
+    image: "/assets/Image (15).png",
     title: "BRANDING: PROS AND CONS THEY DON'T TELL YOU",
     desc: "Advantages and drawbacks of branding strategies. Gain insights to make informed decisions about your brand's direction."
   }
