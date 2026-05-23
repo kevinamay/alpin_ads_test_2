@@ -18,7 +18,7 @@ export default function Header() {
         <Link href="#services" className="hover:underline underline-offset-4">
           SERVICES
         </Link>
-        <Link href="/about" className="hover:underline underline-offset-4">
+        <Link href="#about" className="hover:underline underline-offset-4">
           ABOUT ME
         </Link>
         <Link href="/blog" className="hover:underline underline-offset-4">

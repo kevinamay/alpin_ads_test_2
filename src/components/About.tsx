@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section className="w-full lg:h-[900px] h-auto grid grid-cols-1 lg:grid-cols-2 border-b border-black text-[#242424] bg-white">
+    <section id="about" className="w-full lg:h-[900px] h-auto grid grid-cols-1 lg:grid-cols-2 border-b border-black text-[#242424] bg-white">
       
       {/* Kolom Kiri (Area Teks) */}
       <div className="flex flex-col justify-between p-6 lg:p-[64px] border-b lg:border-b-0 lg:border-r border-black">
