@@ -160,16 +160,6 @@ export default function Testimonials() {
               Discover what our clients have to say about their transformative experiences partnering with us. Read their testimonials below.
             </p>
           </div>
-          {/* Ikon Kutipan (Kiri Atas) */}
-          <div className="self-start mb-[32px]">
-            <Image 
-              src="/assets/Vector (9).svg" 
-              width={40} 
-              height={40} 
-              className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]" 
-              alt="Quote Icon" 
-            />
-          </div>
           <div className="mt-24 lg:mt-0">
             <Image src="/assets/Vector (6).svg" alt="Geometric Logo" width={80} height={104.41} className="object-contain" />
           </div>
