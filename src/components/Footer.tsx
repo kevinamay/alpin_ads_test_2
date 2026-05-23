@@ -28,9 +28,9 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-6">
             <h4 className="font-mono text-[12px] uppercase text-[#242424] mb-2">PAGES</h4>
             <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">HOME</a>
-            <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">SERVICES</a>
+            <a href="#services" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">SERVICES</a>
             <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">ABOUT ME</a>
-            <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">CONTACT</a>
+            <a href="#contact" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">CONTACT</a>
             <button className="mt-4 bg-[#EBFB48] border border-black px-6 py-3 font-mono text-[12px] uppercase text-[#242424] hover:bg-white transition-colors cursor-pointer">
               MORE TEMPLATES
             </button>
@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Column 2 */}
           <div className="flex flex-col items-start gap-6">
             <h4 className="font-mono text-[12px] uppercase text-[#242424] mb-2">CMS</h4>
-            <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">WORK</a>
+            <a href="#work" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">WORK</a>
             <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">WORK SINGLE</a>
             <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">BLOG</a>
             <a href="#" className="font-mono text-[12px] uppercase text-[#242424] hover:opacity-70 transition-opacity">BLOG POST</a>

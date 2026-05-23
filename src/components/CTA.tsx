@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="w-full flex flex-col bg-white">
+    <section id="contact" className="w-full flex flex-col bg-white">
       {/* Marquee Top */}
       <div className="w-full h-[52px] bg-[#EBFB48] border-t border-black overflow-hidden flex items-center">
         <div className="flex whitespace-nowrap animate-marquee">

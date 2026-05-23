@@ -66,7 +66,7 @@ export default function Services() {
                 {service.desc}
               </p>
               <a 
-                href="#" 
+                href="#contact" 
                 className="font-mono text-[13px] uppercase leading-[1.4] border-b border-black w-fit mt-6 pb-1 hover:opacity-70 transition-opacity"
               >
                 MORE INFORMATION
