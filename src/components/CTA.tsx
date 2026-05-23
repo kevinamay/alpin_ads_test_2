@@ -20,15 +20,20 @@ export default function CTA() {
 
       {/* Main Content */}
       <div className="w-full h-auto px-4 lg:px-[64px] pt-12 lg:pt-[64px] pb-12 lg:pb-[80px] flex flex-col lg:flex-row justify-between items-start lg:items-center border-t border-b border-black">
-        {/* Area Teks Tengah */}
-        <div className="flex-1 flex flex-col items-center justify-center p-6 lg:p-[64px] w-full max-w-[1200px]">
-          <h2 className="font-sans text-[64px] lg:text-[120px] leading-[1] text-[#242424] text-center mb-10 lg:mb-[48px]">
-            Let's create<br />something great.
+        {/* Left Side */}
+        <div className="flex flex-col max-w-[800px] mb-8 lg:mb-0">
+          <span className="font-mono text-[13px] lg:text-[11px] uppercase tracking-widest text-[#242424] mb-8 lg:mb-12">
+            CONTACT
+          </span>
+          <h2 className="font-sans text-[48px] lg:text-[96px] font-normal leading-[1.1] tracking-tighter text-[#242424]">
+            Let’s bring your brand<br />to the next level
           </h2>
-          <button className="h-[51px] px-[32px] bg-[#242424] text-white font-sans text-[16px] lg:text-[18px] uppercase hover:bg-black transition-colors rounded-none w-full lg:w-auto">
-            GET IN TOUCH
-          </button>
         </div>
+
+        {/* Right Side - Button */}
+        <button className="w-full lg:w-[158px] h-[51px] bg-[#242424] text-white flex items-center justify-center font-mono text-[13px] uppercase border border-black hover:bg-white hover:text-[#242424] transition-colors gap-1 shrink-0 mt-8 lg:mt-0">
+          GET IN TOUCH <ArrowUpRight size={16} />
+        </button>
       </div>
     </section>
   );
