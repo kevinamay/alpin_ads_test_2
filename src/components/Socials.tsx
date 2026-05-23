@@ -49,16 +49,16 @@ export default function Socials() {
       </div>
 
       {/* Area Grid Links (Bawah) */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:h-[450px]">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-4 lg:h-[450px]">
         {socials.map((social, index) => {
           return (
             <a 
               key={index}
               href="#"
-              className="group relative flex flex-col h-[450px] lg:h-full border-b border-black lg:border-b-0 lg:border-r lg:last:border-r-0 last:border-b-0 bg-white text-[#242424] hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300"
+              className="group relative flex flex-col h-[300px] lg:h-full border-b lg:border-b-0 lg:border-r border-black last:border-b-0 lg:last:border-r-0 bg-white text-[#242424] hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300"
             >
               {/* Bagian Atas (Ikon) */}
-              <div className="p-[64px]">
+              <div className="p-6 lg:p-[64px]">
                 <Image 
                   src={social.iconSrc} 
                   alt={`${social.name} icon`} 
@@ -69,7 +69,7 @@ export default function Socials() {
               </div>
               
               {/* Bagian Tengah (Nama) */}
-              <div className="flex-1 flex items-end px-[64px] pb-[64px]">
+              <div className="flex-1 flex items-end px-6 lg:px-[64px] pb-6 lg:pb-[64px] mb-[51px]">
                 <span className="text-[32px] font-sans uppercase">
                   {social.name}
                 </span>
@@ -77,7 +77,7 @@ export default function Socials() {
               
               {/* Bagian Bawah (Link Bar) */}
               <div 
-                className={`absolute bottom-0 w-full h-[51px] border-t flex justify-between items-center px-[64px] transition-colors duration-300
+                className={`absolute bottom-0 w-full h-[51px] border-t flex justify-between items-center px-6 lg:px-[64px] transition-colors duration-300
                   ${social.isDark 
                     ? 'bg-[#1a1a1a] text-white border-[#1a1a1a] group-hover:border-white/20' 
                     : 'bg-white text-[#242424] border-black group-hover:bg-[#1a1a1a] group-hover:text-white group-hover:border-white/20'}

@@ -19,21 +19,30 @@ const newsData = [
   {
     image: "/assets/Image (15).png",
     title: "BRANDING: PROS AND CONS THEY DON'T TELL YOU",
-    desc: "Advantages and drawbacks of branding strategies. Gain insights to make informed decisions about your brand's direction."
+    desc: "Advantages and drawbacks of branding strategies. Gain insights to make informed decisions about your brand's direction.",
+    date: "01.04.2024"
   }
 ];
 
 export default function News() {
   return (
     <section className="w-full bg-white flex flex-col border-b border-black">
-      {/* Top Header */}
-      <div className="w-full flex justify-between items-center px-4 lg:px-[64px] py-8 lg:py-[64px] border-b border-black">
-        <h2 className="font-sans text-5xl lg:text-[80px] leading-[1] text-[#242424] font-normal tracking-tight">
-          Latest News
-        </h2>
-        <span className="font-mono text-[13px] uppercase text-[#242424] border-b border-transparent hover:border-black cursor-pointer transition-colors mt-auto lg:mt-0">
-          SEE ALL
-        </span>
+      {/* Header Section (Atas) */}
+      <div className="w-full border-b border-black flex flex-col lg:flex-row justify-between items-start lg:items-end p-6 lg:p-[64px]">
+        {/* Kiri: Teks */}
+        <div>
+          <h3 className="font-mono text-[13px] uppercase leading-[1.4] mb-8 lg:mb-[32px]">
+            NEWS
+          </h3>
+          <h2 className="font-sans text-[48px] lg:text-[80px] font-normal leading-[1.1]">
+            Recent works.
+          </h2>
+        </div>
+        
+        {/* Kanan: Tombol View All */}
+        <button className="font-sans text-[16px] lg:text-[18px] uppercase border-b-2 border-black pb-1 hover:opacity-70 transition-opacity mt-8 lg:mt-0">
+          VIEW ALL
+        </button>
       </div>
 
       {/* 4-Column Grid */}
@@ -54,7 +63,7 @@ export default function News() {
             </div>
             
             {/* Text Content */}
-            <div className="p-[32px] lg:p-[48px] flex flex-col flex-grow bg-white hover:bg-gray-50 transition-colors cursor-pointer border-t border-black">
+            <div className="p-6 lg:p-[48px] flex flex-col flex-grow bg-white hover:bg-gray-50 transition-colors cursor-pointer border-t border-black">
               <h3 className="font-mono text-[13px] uppercase leading-[1.6] text-[#242424] mb-6">
                 {item.title}
               </h3>

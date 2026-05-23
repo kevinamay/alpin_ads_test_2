@@ -15,13 +15,13 @@ export default function Logos() {
     <section className="w-full h-auto lg:h-[161px] bg-white text-[#242424] border-b border-black flex flex-col lg:flex-row">
       {/* Area Kiri (Judul) */}
       <div className="w-full h-[64px] border-b border-black lg:w-[308px] lg:h-full lg:border-b-0 lg:border-r flex items-center justify-center flex-none">
-        <h2 className="font-mono text-[13px] uppercase font-normal leading-[1.4] tracking-wider">
+        <h2 className="font-mono text-[13px] uppercase font-normal leading-[1.4] tracking-wider text-center px-4">
           BRANDS I'VE WORKED WITH
         </h2>
       </div>
 
       {/* Area Kanan (Kumpulan Logo) */}
-      <div className="flex-1 h-full flex flex-wrap justify-center py-8 px-4 gap-8 lg:flex-nowrap lg:flex-row lg:items-center lg:justify-between lg:px-[64px] lg:gap-[10px] lg:py-0 overflow-hidden">
+      <div className="flex-1 h-full flex flex-wrap justify-center py-12 px-6 gap-8 lg:flex-nowrap lg:flex-row lg:items-center lg:justify-between lg:px-[64px] lg:gap-[10px] lg:py-0 overflow-hidden">
         
         {brands.map((brand, index) => (
           <div key={index} className="flex flex-col items-center justify-center flex-none grayscale hover:opacity-70 transition-opacity cursor-pointer">

@@ -27,14 +27,14 @@ export default function Services() {
   return (
     <section id="services" className="w-full grid grid-cols-1 lg:grid-cols-2 text-[#242424] border-b border-black">
       {/* Kolom Kiri: Header & Deskripsi */}
-      <div className="flex flex-col gap-[16px] p-[64px] border-b border-black lg:border-b-0 lg:border-r">
+      <div className="flex flex-col gap-[16px] p-6 lg:p-[64px] border-b border-black lg:border-b-0 lg:border-r">
         <span className="font-mono text-[13px] uppercase font-normal leading-[1.4]">
           SERVICES
         </span>
-        <h2 className="font-sans text-5xl lg:text-[80px] font-normal leading-[1.1] max-w-full">
+        <h2 className="font-sans text-[48px] lg:text-[80px] font-normal leading-[1.1] max-w-full">
           Branding Services
         </h2>
-        <p className="font-sans text-[18px] font-normal leading-[1.8] w-full lg:max-w-[500px]">
+        <p className="font-sans text-[16px] lg:text-[18px] font-normal leading-[1.8] w-full lg:max-w-[500px]">
           Transform your brand into a visual masterpiece. My expertise in branding brings your vision to reality, making your brand shine.
         </p>
       </div>
@@ -44,7 +44,7 @@ export default function Services() {
         {services.map((service, index) => (
           <div 
             key={index} 
-            className="flex flex-col lg:flex-row gap-[32px] p-[64px] border-b border-black last:border-b-0"
+            className="flex flex-col lg:flex-row gap-[24px] lg:gap-[32px] p-6 lg:p-[64px] border-b border-black last:border-b-0 lg:last:border-b-0"
           >
             {/* Ikon Kiri */}
             <div className="flex-none">

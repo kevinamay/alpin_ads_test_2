@@ -56,7 +56,7 @@ export default function Process() {
   return (
     <section className="w-full flex flex-col bg-white">
       {/* Area Marquee Heading (Atas) */}
-      <div className="w-full h-[181px] border-b border-black overflow-hidden flex items-center bg-white relative">
+      <div className="w-full h-[120px] lg:h-[181px] border-b border-black overflow-hidden flex items-center bg-white relative">
         <div className="flex whitespace-nowrap animate-marquee">
           {/* Dua blok identik agar transisi infinite seamless */}
           {[...Array(2)].map((_, i) => (
@@ -64,7 +64,7 @@ export default function Process() {
               {[...Array(4)].map((_, j) => (
                 <div key={j} className="flex items-center gap-[48px] pr-[48px]">
                   <span 
-                    className={`font-sans text-[96px] uppercase leading-none ${j % 2 === 0 ? 'text-[#242424]' : 'text-transparent'}`}
+                    className={`font-sans text-[48px] lg:text-[96px] uppercase leading-none ${j % 2 === 0 ? 'text-[#242424]' : 'text-transparent'}`}
                     style={j % 2 !== 0 ? { WebkitTextStroke: '1px #242424' } : undefined}
                   >
                     PROCESS
@@ -80,7 +80,7 @@ export default function Process() {
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 border-b border-black bg-white items-start">
         
         {/* Kolom Kiri (Foto Model) */}
-        <div className="relative w-full h-[600px] lg:h-[902px] lg:sticky lg:top-0 border-b border-black lg:border-b-0 lg:border-r overflow-hidden">
+        <div className="relative w-full h-[400px] lg:h-[902px] lg:sticky lg:top-0 border-b lg:border-b-0 lg:border-r border-black overflow-hidden">
           <Image 
             src="/assets/Image (6).png" 
             fill 
@@ -94,7 +94,7 @@ export default function Process() {
         {/* Kolom Kanan (Konten & Steps) */}
         <div className="flex flex-col h-full w-full">
           {/* Header Section */}
-          <div className="p-[64px] flex flex-col">
+          <div className="p-6 lg:p-[64px] flex flex-col">
             <Image 
               src="/assets/Vector (8).svg" 
               width={60} 
@@ -102,10 +102,10 @@ export default function Process() {
               className="w-[60px] h-[60px] object-contain" 
               alt="Process Icon" 
             />
-            <h2 className="mt-[64px] font-sans text-5xl lg:text-[80px] leading-[1.1] text-[#242424]">
+            <h2 className="mt-8 lg:mt-[64px] font-sans text-[48px] lg:text-[80px] leading-[1.1] text-[#242424]">
               Your new brand<br />in 4 steps.
             </h2>
-            <p className="mt-[32px] text-[18px] leading-[1.8] max-w-[500px] text-[#242424]">
+            <p className="mt-6 lg:mt-[32px] text-[16px] lg:text-[18px] leading-[1.8] max-w-[500px] text-[#242424]">
               My streamlined process ensures collaboration, creativity, and precision to deliver exceptional branding solutions tailored to your vision.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function Process() {
               <div key={index} className="flex flex-col w-full">
                 {/* Top Bar */}
                 <div 
-                  className="h-[51px] border-t border-black flex justify-between items-center px-[64px] cursor-pointer hover:bg-gray-50 transition-colors"
+                  className="h-[51px] border-t border-black flex justify-between items-center px-6 lg:px-[64px] cursor-pointer hover:bg-gray-50 transition-colors"
                   onClick={() => setOpenStep(openStep === index ? null : index)}
                 >
                   <span className="uppercase font-mono text-[13px]">{step.label}</span>
@@ -127,7 +127,7 @@ export default function Process() {
                 
                 {/* Content Box */}
                 {openStep === index && (
-                  <div className="flex flex-col lg:flex-row gap-8 p-[64px] border-t border-black">
+                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 p-6 lg:p-[64px] border-t border-black">
                     {/* Kiri: Angka */}
                     <div className="font-sans text-[24px]">
                       {step.num}

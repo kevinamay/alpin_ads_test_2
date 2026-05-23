@@ -68,7 +68,7 @@ const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => {
         <span className="font-mono text-[11px] uppercase text-[#242424]">
           {data.company} {isOpen ? '↑' : '↓'}
         </span>
-        <div className="flex gap-[2px]">
+        <div className="self-center lg:self-end flex gap-[16px] mt-8 lg:mt-[-64px]">
           {[...Array(5)].map((_, i) => (
             <Star key={i} size={12} fill="#111111" color="#111111" />
           ))}
@@ -82,7 +82,7 @@ const TestimonialCard = ({ data, isLast }: { data: any, isLast?: boolean }) => {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="p-[32px] flex flex-col">
+          <div className="p-6 lg:p-[64px] flex flex-col items-center">
             <div className="w-[70px] h-[70px] relative mb-8">
               <Image src={data.logo} alt={data.company} fill className="object-contain" />
             </div>
@@ -150,12 +150,25 @@ export default function Testimonials() {
             <h3 className="font-mono text-[13px] uppercase tracking-widest mb-[32px] text-[#242424]">
               TESTIMONIALS
             </h3>
-            <h2 className="font-sans text-5xl lg:text-[80px] leading-[1.1] text-[#242424] mb-[32px]">
-              What my<br/>clients say
-            </h2>
+            {/* Teks Testimonial Utama */}
+            <div className="w-full flex justify-center mb-8 lg:mb-[48px]">
+              <h2 className="font-sans text-[36px] lg:text-[80px] font-normal leading-[1.1] text-center max-w-[1000px]">
+                "Absolutely thrilled with the branding! They captured the essence of my business perfectly."
+              </h2>
+            </div>
             <p className="font-sans text-[18px] leading-[1.8] text-[#444444] max-w-[400px]">
               Discover what our clients have to say about their transformative experiences partnering with us. Read their testimonials below.
             </p>
+          </div>
+          {/* Ikon Kutipan (Kiri Atas) */}
+          <div className="self-start mb-[32px]">
+            <Image 
+              src="/assets/Vector (9).svg" 
+              width={40} 
+              height={40} 
+              className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]" 
+              alt="Quote Icon" 
+            />
           </div>
           <div className="mt-24 lg:mt-0">
             <Image src="/assets/Vector (6).svg" alt="Geometric Logo" width={80} height={104.41} className="object-contain" />

@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="w-full h-[63px] flex border-b border-black bg-white text-[#242424] text-[13px] leading-[1.4] font-mono uppercase font-normal">
       {/* Logo (Paling Kiri) */}
-      <div className="flex items-center h-full px-8 border-r border-black flex-none">
+      <div className="flex items-center h-full px-4 lg:px-8 border-r border-black flex-none">
         <Link href="/" className="font-sans font-medium text-xl lowercase normal-case">
           skøld.
         </Link>
@@ -49,7 +49,8 @@ export default function Header() {
       </Link>
 
       {/* Hamburger Menu (Mobile) */}
-      <div className="flex lg:hidden items-center justify-center h-full w-[63px] border-l border-black cursor-pointer flex-none">
+      <div className="flex lg:hidden items-center justify-center h-full px-6 border-l border-black cursor-pointer flex-none gap-2 hover:bg-gray-50 transition-colors">
+        <span className="font-mono text-[13px] uppercase">Menu</span>
         <div className="space-y-1.5">
           <div className="w-5 h-[2px] bg-black"></div>
           <div className="w-5 h-[2px] bg-black"></div>
